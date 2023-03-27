@@ -28,20 +28,13 @@ galleryList.addEventListener("click", (event) => {
   const orinalUrl = event.target.dataset.source;
   const lightbox = basicLightbox.create(`
     <img src="${orinalUrl}">`);
-    lightbox.show();
+  lightbox.show();
 });
-  
-window.addEventListener('keydown', handleKeyDown);
-const handleKeyDown = event => {
-  if (event.key === 'Escape') {
-    basicLightbox.close();
-    window.removeEventListener('keydown', onEscKeyPress);
-  };
+
+window.addEventListener("keydown", handleKeyDown);
+const handleKeyDown = (event) => {
+  if (event.key === "Escape") {
+    lightbox.close();
+    window.removeEventListener("keydown", onEscKeyPress);
+  }
 };
-
-
-
-
-
-
-
