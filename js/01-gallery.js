@@ -25,9 +25,9 @@ galleryList.addEventListener("click", (event) => {
     return;
   }
 
-  const orinalUrl = event.target.dataset.source;
+  const originalUrl = event.target.dataset.source;
   const lightbox = basicLightbox.create(`
-    <img src="${orinalUrl}">`);
+    <img src="${originalUrl}">`);
   lightbox.show();
 });
 
